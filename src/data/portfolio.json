@@ -180,14 +180,14 @@
         "id": "Platform produktivitas full-stack modern yang mengintegrasikan manajemen tugas, kolaborasi tim, dan komunikasi real-time dalam satu ekosistem yang seamless. Dirancang untuk individu dan tim yang mengutamakan efisiensi, AIKU menggabungkan kekuatan fitur organisasi harian dengan fitur sosial yang interaktif."
       },
       "tags": [
-        "Next.js 14",
+        "Next.js",
         "Node.js",
         "PostgreSQL",
         "Prisma"
       ],
       "link": "http://103.126.117.39",
       "accent": "#7c3aed",
-      "image": "",
+      "image": "AIKU1.png",
       "year": 2026,
       "aiMetrics": null
     }
