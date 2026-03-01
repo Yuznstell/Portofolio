@@ -99,7 +99,7 @@ export default function AboutMeClient({
                             {t(role, lang)}
                         </p>
 
-                        <p className="text-[var(--fg-muted)] text-base md:text-lg leading-[1.8] mb-8">
+                        <p className="text-[var(--fg-muted)] text-base md:text-lg leading-[1.8] text-justify mb-8">
                             {t(bio, lang)}
                         </p>
 

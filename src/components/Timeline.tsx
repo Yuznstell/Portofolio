@@ -63,7 +63,7 @@ function TimelineItem({
                 <p className="text-[var(--accent-light)] text-sm font-medium mb-3">
                     {entry.company}
                 </p>
-                <p className="text-[var(--fg-muted)] text-sm leading-relaxed mb-4">
+                <p className="text-[var(--fg-muted)] text-sm leading-relaxed text-justify mb-4">
                     {t(entry.description, lang)}
                 </p>
                 <div className="flex flex-wrap gap-2">

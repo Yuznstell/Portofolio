@@ -157,7 +157,7 @@ export default function ProjectCard({
                         {title}
                     </h3>
 
-                    <p className="text-[var(--fg-muted)] text-sm leading-relaxed mb-6">
+                    <p className="text-[var(--fg-muted)] text-sm leading-relaxed text-justify mb-6">
                         {description}
                     </p>
 

@@ -94,7 +94,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.7 }}
-                            className="text-[var(--fg-muted)] text-base md:text-lg 2xl:text-xl leading-relaxed max-w-[480px] 2xl:max-w-[600px] mb-10 2xl:mb-14"
+                            className="text-[var(--fg-muted)] text-base md:text-lg 2xl:text-xl leading-relaxed text-justify max-w-[480px] 2xl:max-w-[600px] mb-10 2xl:mb-14"
                         >
                             {lang === "en"
                                 ? "Crafting intelligent systems and scalable platforms. From multi-tenant architectures to production ML pipelines — I build things that think and things that scale."
