@@ -53,9 +53,33 @@ export interface PortfolioData {
     experiences: Experience[];
 }
 
-const DATA_PATH = path.join(process.cwd(), "src", "data", "portfolio.json");
+import os from "os";
+
+const getFilePath = async () => {
+    const isProd = process.env.NODE_ENV === "production" || process.env.VERCEL === "1";
+    const tmpPath = path.join(os.tmpdir(), "portfolio.json");
+    const defaultPath = path.join(process.cwd(), "src", "data", "portfolio.json");
+
+    if (isProd) {
+        try {
+            await fs.access(tmpPath);
+            return tmpPath;
+        } catch {
+            try {
+                const raw = await fs.readFile(defaultPath, "utf-8");
+                await fs.writeFile(tmpPath, raw, "utf-8");
+            } catch (e) {
+                // Ignore errors
+            }
+            return tmpPath;
+        }
+    }
+
+    return defaultPath;
+};
 
 export async function readPortfolioData(): Promise<PortfolioData> {
+    const DATA_PATH = await getFilePath();
     const raw = await fs.readFile(DATA_PATH, "utf-8");
     return JSON.parse(raw) as PortfolioData;
 }
@@ -80,6 +104,7 @@ export async function updatePortfolioData(
             }
         }
 
+        const DATA_PATH = await getFilePath();
         const json = JSON.stringify(data, null, 2);
         await fs.writeFile(DATA_PATH, json, "utf-8");
         return { success: true };
