@@ -175,76 +175,60 @@
       "id": "exp-1",
       "period": "2023 — Present",
       "role": {
-        "en": "Senior Full-stack & AI Engineer",
-        "id": "Senior Full-stack & AI Engineer"
+        "en": "Full-stack Developer",
+        "id": "Full-stack Developer"
       },
       "company": "Freelance / Contract",
       "description": {
-        "en": "Designing and building end-to-end AI-powered platforms, multi-tenant SaaS applications, and medical prediction systems. Leading architecture decisions from database design to ML pipeline deployment.",
-        "id": "Merancang dan membangun platform berbasis AI secara end-to-end, aplikasi SaaS multi-tenant, dan sistem prediksi medis. Memimpin keputusan arsitektur dari desain database hingga deployment pipeline ML."
+        "en": "Designing and building end-to-end AI-powered platforms, multi-tenant SaaS applications, Leading architecture decisions from database design to ML pipeline deployment.",
+        "id": "Merancang dan membangun platform berbasis AI secara end-to-end, aplikasi SaaS multi-tenant, Memimpin keputusan arsitektur dari desain database hingga deployment pipeline ML."
       },
       "tags": [
         "Next.js",
         "FastAPI",
         "TensorFlow",
-        "Docker"
+        "Docker",
+        "React.js",
+        "Python",
+        "PWA"
       ]
     },
     {
-      "id": "exp-2",
-      "period": "2021 — 2023",
+      "id": "mm81o5ofqni9",
+      "period": "2024-2025",
       "role": {
-        "en": "Full-stack Developer",
-        "id": "Full-stack Developer"
+        "en": "AI Developer",
+        "id": "Pengembang AI"
       },
-      "company": "Tech Company",
+      "company": "Universitas Lampung",
       "description": {
-        "en": "Built and maintained large-scale web applications serving thousands of daily active users. Implemented real-time features, optimized database performance, and mentored junior developers.",
-        "id": "Membangun dan memelihara aplikasi web berskala besar yang melayani ribuan pengguna aktif harian. Mengimplementasikan fitur real-time, mengoptimalkan performa database, dan membimbing developer junior."
+        "en": "Developed a real-time face recognition prototype using MTCNN and FaceNet to automate student data management.",
+        "id": "Mengembangkan prototipe pengenalan wajah real-time menggunakan MTCNN dan FaceNet untuk otomasi pendataan mahasiswa."
       },
       "tags": [
-        "React",
-        "Node.js",
-        "PostgreSQL",
-        "AWS"
+        "Python",
+        "MTCNN",
+        "Computer Vision",
+        "TensorFlow"
       ]
     },
     {
-      "id": "exp-3",
-      "period": "2020 — 2021",
+      "id": "mm81pi9pgczt",
+      "period": "2022-2023",
       "role": {
-        "en": "Frontend Developer",
-        "id": "Frontend Developer"
+        "en": "Frontend Developer & UI/UX Designer",
+        "id": "Pengembang Frontend & Desainer UI/UX"
       },
-      "company": "Startup",
+      "company": "UPA TIK Universitas Lampung (Internship)",
       "description": {
-        "en": "Developed responsive web interfaces and progressive web apps. Established component library and design system. Introduced automated testing and CI pipelines.",
-        "id": "Mengembangkan antarmuka web responsif dan progressive web apps. Membangun library komponen dan design system. Memperkenalkan automated testing dan CI pipeline."
+        "en": "Designed interactive prototypes in Figma and implemented web components for digital services.",
+        "id": "Merancang prototipe interaktif di Figma dan mengimplementasikan komponen web untuk layanan digital."
       },
       "tags": [
-        "React",
-        "TypeScript",
-        "Tailwind",
-        "Jest"
-      ]
-    },
-    {
-      "id": "exp-4",
-      "period": "2019 — 2020",
-      "role": {
-        "en": "Junior Developer",
-        "id": "Junior Developer"
-      },
-      "company": "Agency",
-      "description": {
-        "en": "Launched production websites for diverse clients. Gained deep experience with server management using WHM/cPanel and learned full deployment lifecycle.",
-        "id": "Meluncurkan website produksi untuk berbagai klien. Mendapatkan pengalaman mendalam di manajemen server menggunakan WHM/cPanel dan mempelajari siklus deployment secara lengkap."
-      },
-      "tags": [
-        "PHP",
-        "JavaScript",
-        "cPanel",
-        "MySQL"
+        "Figma",
+        "UI/UX",
+        "Frontend",
+        "Collaboration"
       ]
     }
   ]
