@@ -168,6 +168,28 @@
       "image": "face-recognition-mtcnn.png",
       "accent": "#8b5cf6",
       "year": 2025
+    },
+    {
+      "id": "mm829qigoa34",
+      "title": {
+        "en": "AIKU - Integrated Productivity & Collaboration Platform",
+        "id": "AIKU - Platform Produktivitas & Kolaborasi Terpadu"
+      },
+      "description": {
+        "en": "A high-performance full-stack productivity ecosystem designed for seamless workflow management. AIKU integrates a rich-text daily note system (Tiptap), dynamic calendars with event sharing, and granular recurring reminders. It features a robust social layer including a friend system with online status and instant messaging powered by Socket.IO. Built with a modern tech stack (Next.js 14, Node.js, Prisma, and PostgreSQL) ensuring security via JWT and Role-Based Access Control.",
+        "id": "Platform produktivitas full-stack modern yang mengintegrasikan manajemen tugas, kolaborasi tim, dan komunikasi real-time dalam satu ekosistem yang seamless. Dirancang untuk individu dan tim yang mengutamakan efisiensi, AIKU menggabungkan kekuatan fitur organisasi harian dengan fitur sosial yang interaktif."
+      },
+      "tags": [
+        "Next.js 14",
+        "Node.js",
+        "PostgreSQL",
+        "Prisma"
+      ],
+      "link": "http://103.126.117.39",
+      "accent": "#7c3aed",
+      "image": "",
+      "year": 2026,
+      "aiMetrics": null
     }
   ],
   "experiences": [
