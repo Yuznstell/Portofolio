@@ -95,9 +95,9 @@ export default function Timeline() {
     return (
         <SectionWrapper
             id="experience"
-            className="relative py-24 md:py-32 px-6 md:px-10"
+            className="relative py-24 md:py-32 px-6 md:px-10 lg:px-16 2xl:px-24"
         >
-            <div className="max-w-[800px] mx-auto">
+            <div className="max-w-[800px] xl:max-w-[1000px] 2xl:max-w-[1200px] mx-auto">
                 <div className="mb-16">
                     <span className="font-mono text-xs text-[var(--accent)] tracking-widest uppercase mb-3 block">
                         {tr.timeline.sectionLabel[lang]}

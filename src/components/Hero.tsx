@@ -43,8 +43,8 @@ export default function Hero() {
                 aria-hidden="true"
             />
 
-            <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 md:px-10 py-32">
-                <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
+            <div className="relative z-10 w-full max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1700px] mx-auto px-6 md:px-10 lg:px-16 2xl:px-24 py-32 2xl:py-48">
+                <div className="grid lg:grid-cols-[1.1fr_0.9fr] 2xl:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 items-center">
                     <div>
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -62,7 +62,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.5 }}
-                            className="font-display font-bold text-[clamp(2.2rem,5.5vw,4.2rem)] leading-[1.05] tracking-[-0.03em] mb-6"
+                            className="font-display font-bold text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.05] tracking-[-0.03em] mb-6 2xl:mb-10"
                         >
                             <span className="text-[var(--fg)]">Senior</span>
                             <br />
@@ -94,7 +94,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.7 }}
-                            className="text-[var(--fg-muted)] text-base md:text-lg leading-relaxed max-w-[480px] mb-10"
+                            className="text-[var(--fg-muted)] text-base md:text-lg 2xl:text-xl leading-relaxed max-w-[480px] 2xl:max-w-[600px] mb-10 2xl:mb-14"
                         >
                             {lang === "en"
                                 ? "Crafting intelligent systems and scalable platforms. From multi-tenant architectures to production ML pipelines — I build things that think and things that scale."

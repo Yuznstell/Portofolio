@@ -16,9 +16,9 @@ export default function Footer() {
     return (
         <SectionWrapper
             id="contact"
-            className="relative py-24 md:py-32 px-6 md:px-10 border-t border-[var(--border)]"
+            className="relative py-24 md:py-32 px-6 md:px-10 lg:px-16 2xl:px-24 border-t border-[var(--border)]"
         >
-            <div className="max-w-[800px] mx-auto text-center">
+            <div className="max-w-[800px] xl:max-w-[1000px] 2xl:max-w-[1200px] mx-auto text-center">
                 <span className="font-mono text-xs text-[var(--accent)] tracking-widest uppercase mb-3 block">
                     {tr.footer.sectionLabel[lang]}
                 </span>

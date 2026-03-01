@@ -35,9 +35,9 @@ export default function AboutMeClient({
     return (
         <SectionWrapper
             id="about"
-            className="relative py-20 md:py-28 px-6 md:px-10"
+            className="relative py-20 md:py-28 lg:py-36 px-6 md:px-10 lg:px-16 2xl:px-24"
         >
-            <div className="max-w-[1200px] mx-auto">
+            <div className="max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1700px] mx-auto">
                 <div className="flex items-end justify-between mb-14">
                     <div>
                         <span className="font-mono text-xs text-[var(--accent)] tracking-widest uppercase mb-3 block">
@@ -60,7 +60,7 @@ export default function AboutMeClient({
                         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
                         className="relative mx-auto lg:mx-0"
                     >
-                        <div className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-2xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden relative">
+                        <div className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] md:w-[240px] md:h-[240px] 2xl:w-[320px] 2xl:h-[320px] rounded-2xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden relative">
                             {photoUrl ? (
                                 <img
                                     src={photoUrl}

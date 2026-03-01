@@ -102,9 +102,9 @@ export default function TechStack() {
     return (
         <SectionWrapper
             id="stack"
-            className="relative py-24 md:py-32 px-6 md:px-10"
+            className="relative py-24 md:py-32 px-6 md:px-10 lg:px-16 2xl:px-24"
         >
-            <div className="max-w-[1200px] mx-auto">
+            <div className="max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1700px] mx-auto">
                 <div className="mb-16">
                     <span className="font-mono text-xs text-[var(--accent)] tracking-widest uppercase mb-3 block">
                         {tr.techStack.sectionLabel[lang]}

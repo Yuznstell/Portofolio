@@ -43,9 +43,9 @@ export default function ProjectShowcase() {
     return (
         <SectionWrapper
             id="projects"
-            className="relative py-24 md:py-32 px-6 md:px-10"
+            className="relative py-24 md:py-32 px-6 md:px-10 lg:px-16 2xl:px-24"
         >
-            <div className="max-w-[1200px] mx-auto">
+            <div className="max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1700px] mx-auto">
                 <div className="flex items-end justify-between mb-10">
                     <div>
                         <span className="font-mono text-xs text-[var(--accent)] tracking-widest uppercase mb-3 block">
@@ -72,8 +72,8 @@ export default function ProjectShowcase() {
                         <button
                             onClick={() => setActiveYear(null)}
                             className={`px-4 py-2 rounded-full text-xs font-mono font-medium tracking-wide border transition-all duration-300 whitespace-nowrap ${activeYear === null
-                                    ? "bg-[var(--accent)] text-white border-[var(--accent)]"
-                                    : "border-[var(--border)] text-[var(--fg-muted)] hover:border-[var(--border-accent)] hover:text-[var(--fg)]"
+                                ? "bg-[var(--accent)] text-white border-[var(--accent)]"
+                                : "border-[var(--border)] text-[var(--fg-muted)] hover:border-[var(--border-accent)] hover:text-[var(--fg)]"
                                 }`}
                         >
                             {tr.projects.all[lang]}
@@ -83,8 +83,8 @@ export default function ProjectShowcase() {
                                 key={year}
                                 onClick={() => setActiveYear(year)}
                                 className={`px-4 py-2 rounded-full text-xs font-mono font-medium tracking-wide border transition-all duration-300 whitespace-nowrap ${activeYear === year
-                                        ? "bg-[var(--accent)] text-white border-[var(--accent)]"
-                                        : "border-[var(--border)] text-[var(--fg-muted)] hover:border-[var(--border-accent)] hover:text-[var(--fg)]"
+                                    ? "bg-[var(--accent)] text-white border-[var(--accent)]"
+                                    : "border-[var(--border)] text-[var(--fg-muted)] hover:border-[var(--border-accent)] hover:text-[var(--fg)]"
                                     }`}
                             >
                                 {year}
@@ -93,7 +93,7 @@ export default function ProjectShowcase() {
                     </div>
                 )}
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 xl:gap-8">
                     {filteredProjects.map((project, i) => (
                         <ProjectCard
                             key={project.id}
