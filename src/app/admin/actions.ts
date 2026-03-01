@@ -2,6 +2,7 @@
 
 import fs from "fs/promises";
 import path from "path";
+import { revalidatePath } from "next/cache";
 
 export interface BilingualText {
     en: string;
@@ -107,6 +108,9 @@ export async function updatePortfolioData(
         const DATA_PATH = await getFilePath();
         const json = JSON.stringify(data, null, 2);
         await fs.writeFile(DATA_PATH, json, "utf-8");
+
+        revalidatePath("/", "layout");
+
         return { success: true };
     } catch (err) {
         return {
