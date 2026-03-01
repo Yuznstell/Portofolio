@@ -1,0 +1,251 @@
+{
+  "profile": {
+    "name": "Yudha Nugraha",
+    "role": {
+      "en": "Full-stack Developer & AI Engineer",
+      "id": "Full-stack Developer & AI Engineer"
+    },
+    "tagline": {
+      "en": "Crafting intelligent systems and scalable platforms.",
+      "id": "Membangun sistem cerdas dan platform yang skalabel."
+    }
+  },
+  "about": {
+    "bio": {
+      "en": "As a result-oriented Full-stack Developer and AI Engineer, I focus on developing digital solutions that enhance business efficiency and innovation. My expertise spans Progressive Web Apps (PWA) for institutional platforms, integrated IoT monitoring system architecture, and HUD interface design for electric vehicles. I have a strong track record implementing high-impact AI/ML solutions such as personalized recommendation engines, security camera (CCTV) image enhancement using GAN architectures, and real-time facial recognition biometric verification systems. Additionally, I have experience building community-based applications and integrating blockchain ecosystems for transparent construction management systems. I am committed to bridging complex technology with real business value.",
+      "id": "Sebagai Full-stack Developer dan AI Engineer yang berorientasi pada hasil, saya berfokus pada pengembangan solusi digital yang meningkatkan efisiensi dan inovasi bisnis. Keahlian saya mencakup pengembangan Progressive Web Apps (PWA) untuk platform institusional, arsitektur sistem monitoring IoT terintegrasi, hingga perancangan antarmuka (HUD) untuk kendaraan listrik. Saya memiliki rekam jejak yang kuat dalam mengimplementasikan solusi AI/ML berdampak tinggi, seperti mesin rekomendasi terpersonalisasi, peningkatan kualitas citra keamanan (CCTV) menggunakan arsitektur GAN, dan sistem verifikasi biometrik pengenalan wajah real-time. Selain itu, saya berpengalaman merancang aplikasi berbasis komunitas dan mengintegrasikan ekosistem blockchain untuk sistem manajemen konstruksi yang transparan. Saya berkomitmen untuk menjembatani teknologi kompleks dengan nilai bisnis yang nyata."
+    },
+    "photoUrl": "https://media.licdn.com/dms/image/v2/D5603AQGhr2krcwUkNw/profile-displayphoto-scale_400_400/B56ZktJanFG4Ak-/0/1757399067883?e=1773878400&v=beta&t=1MlyuHcgMhcIO4LrX9F72Ni823Eh3nqRjr463KJ0NZc",
+    "location": "Indonesia"
+  },
+  "projects": [
+    {
+      "id": "pwa-psppi-unila",
+      "title": "PWA Website PSPPI Unila",
+      "description": {
+        "en": "A web application using Progressive Web Apps (PWA) technology for the PSPPI website at the University of Lampung. PWA is designed to overcome the limitations of mobile browsers and native applications, capable of running without internet, and supporting splash screens and push notifications. Testing with Lighthouse demonstrated a more efficient website.",
+        "id": "Aplikasi berbasis web dengan teknologi Progressive Web Apps (PWA) untuk website PSPPI Universitas Lampung. PWA dirancang untuk mengatasi keterbatasan browser seluler dan aplikasi native, dapat berjalan tanpa jaringan internet, serta mendukung splash screen dan push notification. Pengujian menggunakan Lighthouse menunjukkan website yang lebih efisien."
+      },
+      "tags": [
+        "PWA",
+        "WordPress",
+        "Lighthouse"
+      ],
+      "link": "",
+      "image": "pwa-psppi.png",
+      "accent": "#3b82f6",
+      "year": 2022
+    },
+    {
+      "id": "aquaphonics-id",
+      "title": "Aquaphonics.ID",
+      "description": {
+        "en": "A mobile application to help farmers monitor aquaponics in real-time. Uses temperature, pH, and nutrient sensors to monitor plants and fish for maximum yield, improving the community's economic potential.",
+        "id": "Aplikasi mobile untuk membantu petani dalam monitoring akuaponik secara real-time. Menggunakan sensor suhu, pH, dan kadar nutrisi untuk mengawasi tanaman serta ikan agar didapatkan hasil yang maksimal, meningkatkan potensi ekonomi masyarakat."
+      },
+      "tags": [
+        "Android",
+        "IoT",
+        "Sensor",
+        "Real-time"
+      ],
+      "link": "",
+      "image": "aquaphonics.png",
+      "accent": "#10b981",
+      "year": 2022
+    },
+    {
+      "id": "hud-mobil-listrik",
+      "title": {
+        "en": "Electric Car HUD Design — Unila EVU-01",
+        "id": "Rancangan HUD Mobil Listrik Unila EVU-01"
+      },
+      "description": {
+        "en": "Head Up Display for the Unila EVU-01 Electric Car displaying 6 types of critical driver information: Speedometer, Battery Indicator, Clock, Gear Display, Lamp Indicator, and Trip Status. Designed considering electric vehicle limitations such as the absence of LIDAR.",
+        "id": "Head Up Display untuk Mobil Listrik Unila EVU-01 yang menampilkan 6 jenis informasi penting bagi pengemudi: Speedometer, Indikator Baterai, Clock, Gear Display, Lamp Indicator, dan Status Perjalanan. Dirancang dengan mempertimbangkan keterbatasan mobil listrik seperti ketiadaan LIDAR."
+      },
+      "tags": [
+        "HUD",
+        "Embedded",
+        "Visualization"
+      ],
+      "link": "",
+      "image": "hud-mobil-listrik.png",
+      "accent": "#f59e0b",
+      "year": 2023
+    },
+    {
+      "id": "muslimq",
+      "title": "MuslimQ",
+      "description": {
+        "en": "A digital application for Islamic learning and the role of mosques as centers for education and financial transparency. A collaboration between UPT TIK Universitas Lampung and PT. ARAZ INTI LINE (ZITLINE) and Masjid As-Syifa IKPM Gontor, Lampung Branch. Provides religious services, worship, education, and management of zakat, infaq, sedekah, wakaf, and qurban funds.",
+        "id": "Aplikasi digitalisasi pembelajaran agama Islam dan peran masjid sebagai tempat pendidikan serta transparansi keuangan masjid. Kerja sama antara UPT TIK Universitas Lampung dengan PT. ARAZ INTI LINE (ZITLINE) dan Masjid As-Syifa IKPM Gontor Cabang Lampung. Menyediakan layanan keagamaan, ibadah, edukasi, dan pengelolaan dana zakat, infaq, sedekah, wakaf, dan qurban."
+      },
+      "tags": [
+        "Mobile",
+        "UI/UX",
+        "Figma"
+      ],
+      "link": "",
+      "image": "muslimq.png",
+      "accent": "#22d3ee",
+      "year": 2023
+    },
+    {
+      "id": "blockchain-konstruksi",
+      "title": {
+        "en": "Blockchain-Based Construction Material Management",
+        "id": "Manajemen Material Konstruksi Berbasis Blockchain"
+      },
+      "description": {
+        "en": "A blockchain-based construction material management application system to ensure transparency in building construction. Enables various stakeholders to monitor the construction process transparently through blockchain technology.",
+        "id": "Sistem aplikasi manajemen material konstruksi berbasis blockchain untuk memastikan transparansi dalam konstruksi bangunan. Memungkinkan berbagai stakeholders mengawasi proses konstruksi secara transparan melalui teknologi blockchain."
+      },
+      "tags": [
+        "Kotlin",
+        "Blockchain",
+        "Remix Ethereum",
+        "Smart Contract"
+      ],
+      "link": "",
+      "image": "blockchain-konstruksi.png",
+      "accent": "#7c3aed",
+      "year": 2023
+    },
+    {
+      "id": "healing-ai",
+      "title": "Healing.ai",
+      "description": {
+        "en": "A tourism recommendation website for East Java that leverages Machine Learning algorithms to provide destination recommendations based on user preferences. Covers database design, front-end development, RESTful API integration, CORS concepts, and Machine Learning models.",
+        "id": "Website rekomendasi wisata di Jawa Timur yang memanfaatkan algoritma Machine Learning untuk memberikan rekomendasi destinasi sesuai preferensi pengguna. Mencakup perancangan database, pengembangan front-end, integrasi RESTful API, konsep CORS, dan model Machine Learning."
+      },
+      "tags": [
+        "Machine Learning",
+        "JavaScript",
+        "RESTful API",
+        "HTML/CSS"
+      ],
+      "link": "",
+      "image": "healing-ai.png",
+      "accent": "#ec4899",
+      "year": 2024
+    },
+    {
+      "id": "cctv-super-resolution",
+      "title": "CCTV Super Resolution",
+      "description": {
+        "en": "Implementation of Super-Resolution GAN (SRGAN) to enhance digital image quality of CCTV recordings, addressing the low effectiveness of CCTV in Indonesia. Uses the CelebA dataset for model training with evaluation using PSNR and SSIM metrics.",
+        "id": "Implementasi Super-Resolution GAN (SRGAN) untuk meningkatkan kualitas citra digital rekaman CCTV, menjawab permasalahan rendahnya efektivitas CCTV di Indonesia. Menggunakan dataset CelebA untuk pelatihan model dengan evaluasi menggunakan metrik PSNR dan SSIM."
+      },
+      "tags": [
+        "SRGAN",
+        "Computer Vision",
+        "Deep Learning",
+        "Python"
+      ],
+      "link": "",
+      "image": "cctv-super-resolution.png",
+      "accent": "#ef4444",
+      "year": 2024
+    },
+    {
+      "id": "face-recognition-mtcnn",
+      "title": {
+        "en": "MTCNN-Based Face Recognition",
+        "id": "Pengenalan Wajah Berbasis MTCNN"
+      },
+      "description": {
+        "en": "A face recognition system prototype based on Multi-Task Cascaded Convolutional Network (MTCNN) to optimize student data management at the University of Lampung. Automatically identifies student faces in real-time for faster and more secure identity verification.",
+        "id": "Prototipe sistem pengenalan wajah berbasis Multi-Task Cascaded Convolutional Network (MTCNN) untuk mengoptimalkan pengelolaan data mahasiswa di Universitas Lampung. Mengidentifikasi wajah mahasiswa secara otomatis dan real-time untuk verifikasi identitas yang lebih aman dan cepat."
+      },
+      "tags": [
+        "MTCNN",
+        "Face Recognition",
+        "Deep Learning",
+        "Python"
+      ],
+      "link": "",
+      "image": "face-recognition-mtcnn.png",
+      "accent": "#8b5cf6",
+      "year": 2025
+    }
+  ],
+  "experiences": [
+    {
+      "id": "exp-1",
+      "period": "2023 — Present",
+      "role": {
+        "en": "Senior Full-stack & AI Engineer",
+        "id": "Senior Full-stack & AI Engineer"
+      },
+      "company": "Freelance / Contract",
+      "description": {
+        "en": "Designing and building end-to-end AI-powered platforms, multi-tenant SaaS applications, and medical prediction systems. Leading architecture decisions from database design to ML pipeline deployment.",
+        "id": "Merancang dan membangun platform berbasis AI secara end-to-end, aplikasi SaaS multi-tenant, dan sistem prediksi medis. Memimpin keputusan arsitektur dari desain database hingga deployment pipeline ML."
+      },
+      "tags": [
+        "Next.js",
+        "FastAPI",
+        "TensorFlow",
+        "Docker"
+      ]
+    },
+    {
+      "id": "exp-2",
+      "period": "2021 — 2023",
+      "role": {
+        "en": "Full-stack Developer",
+        "id": "Full-stack Developer"
+      },
+      "company": "Tech Company",
+      "description": {
+        "en": "Built and maintained large-scale web applications serving thousands of daily active users. Implemented real-time features, optimized database performance, and mentored junior developers.",
+        "id": "Membangun dan memelihara aplikasi web berskala besar yang melayani ribuan pengguna aktif harian. Mengimplementasikan fitur real-time, mengoptimalkan performa database, dan membimbing developer junior."
+      },
+      "tags": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "AWS"
+      ]
+    },
+    {
+      "id": "exp-3",
+      "period": "2020 — 2021",
+      "role": {
+        "en": "Frontend Developer",
+        "id": "Frontend Developer"
+      },
+      "company": "Startup",
+      "description": {
+        "en": "Developed responsive web interfaces and progressive web apps. Established component library and design system. Introduced automated testing and CI pipelines.",
+        "id": "Mengembangkan antarmuka web responsif dan progressive web apps. Membangun library komponen dan design system. Memperkenalkan automated testing dan CI pipeline."
+      },
+      "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Jest"
+      ]
+    },
+    {
+      "id": "exp-4",
+      "period": "2019 — 2020",
+      "role": {
+        "en": "Junior Developer",
+        "id": "Junior Developer"
+      },
+      "company": "Agency",
+      "description": {
+        "en": "Launched production websites for diverse clients. Gained deep experience with server management using WHM/cPanel and learned full deployment lifecycle.",
+        "id": "Meluncurkan website produksi untuk berbagai klien. Mendapatkan pengalaman mendalam di manajemen server menggunakan WHM/cPanel dan mempelajari siklus deployment secara lengkap."
+      },
+      "tags": [
+        "PHP",
+        "JavaScript",
+        "cPanel",
+        "MySQL"
+      ]
+    }
+  ]
+}
