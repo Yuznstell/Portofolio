@@ -37,24 +37,24 @@
         "Dashboard"
       ],
       "link": "http://103.87.229.5:8081/",
-      "image": "ziva-iptv.png",
+      "image": "ziva-iptv.jpg",
       "gallery": [
         {
-          "src": "ziva-stb-home.png",
+          "src": "ziva-stb-home.jpg",
           "caption": {
             "en": "STB App — In-room TV home screen",
             "id": "Aplikasi STB — Layar utama TV kamar"
           }
         },
         {
-          "src": "ziva-stb-assistance.png",
+          "src": "ziva-stb-assistance.jpg",
           "caption": {
             "en": "STB App — Assistance & Care services",
             "id": "Aplikasi STB — Layanan Assistance & Care"
           }
         },
         {
-          "src": "ziva-dashboard-nursecall.png",
+          "src": "ziva-dashboard-nursecall.jpg",
           "caption": {
             "en": "Dashboard — Real-time nurse call monitor",
             "id": "Dashboard — Monitor panggilan perawat real-time"
