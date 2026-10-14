@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef, ReactNode } from "react";
+import Reveal from "./Reveal";
+import { ReactNode } from "react";
 
 interface SectionWrapperProps {
     children: ReactNode;
@@ -16,19 +16,9 @@ export default function SectionWrapper({
     id,
     delay = 0,
 }: SectionWrapperProps) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-80px" });
-
     return (
-        <motion.section
-            id={id}
-            ref={ref}
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-            transition={{ duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] }}
-            className={className}
-        >
+        <Reveal as="section" id={id} y={40} delay={delay} className={className}>
             {children}
-        </motion.section>
+        </Reveal>
     );
 }
