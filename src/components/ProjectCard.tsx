@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import Reveal from "./Reveal";
 
 const DEVICON_BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 
@@ -74,19 +74,12 @@ export default function ProjectCard({
     year,
     id,
 }: ProjectCardProps) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-60px" });
-
     return (
-        <motion.article
-            ref={ref}
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{
-                duration: 0.6,
-                delay: index * 0.15,
-                ease: [0.25, 0.1, 0.25, 1],
-            }}
+        <Reveal
+            as="article"
+            y={30}
+            delay={index * 0.15}
+            duration={0.6}
             className="group relative rounded-2xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden transition-colors duration-400 hover:border-[var(--border-accent)] hover:bg-[var(--surface-hover)] border-glow"
         >
             <Link href={`/projects/${id}`} className="block cursor-pointer">
@@ -100,11 +93,12 @@ export default function ProjectCard({
 
                 {image && (
                     <div className="w-full h-48 overflow-hidden border-b border-[var(--border)] relative bg-[var(--surface-hover)]">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                             src={`/projects/${image}`}
                             alt={title}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                     </div>
                 )}
@@ -213,6 +207,6 @@ export default function ProjectCard({
                     </div>
                 </div>
             </Link>
-        </motion.article>
+        </Reveal>
     );
 }
