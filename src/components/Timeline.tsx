@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import SectionWrapper from "./SectionWrapper";
+import Reveal, { useInViewOnce } from "./Reveal";
 import { useLanguage, t } from "@/lib/useLanguage";
 import tr from "@/lib/translations";
 
@@ -24,28 +24,25 @@ function TimelineItem({
     index: number;
     lang: "en" | "id";
 }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-80px" });
+    const [ref, isInView] = useInViewOnce<HTMLDivElement>();
 
     return (
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{
-                duration: 0.6,
-                delay: index * 0.12,
-                ease: [0.25, 0.1, 0.25, 1],
-            }}
+        <Reveal
+            y={30}
+            delay={index * 0.12}
+            duration={0.6}
             className="relative pl-8 md:pl-10 pb-12 last:pb-0 group"
         >
             <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-[var(--border)] group-last:bg-gradient-to-b group-last:from-[var(--border)] group-last:to-transparent">
-                <motion.div
-                    initial={{ height: 0 }}
-                    animate={isInView ? { height: "100%" } : {}}
-                    transition={{ duration: 0.8, delay: index * 0.12 + 0.3 }}
+                <div
+                    ref={ref}
                     className="w-full bg-gradient-to-b from-[var(--accent)] to-transparent"
-                    style={{ position: "absolute", top: 0 }}
+                    style={{
+                        position: "absolute",
+                        top: 0,
+                        height: isInView ? "100%" : "0%",
+                        transition: `height 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) ${index * 0.12 + 0.3}s`,
+                    }}
                 />
             </div>
 
@@ -77,7 +74,7 @@ function TimelineItem({
                     ))}
                 </div>
             </div>
-        </motion.div>
+        </Reveal>
     );
 }
 
