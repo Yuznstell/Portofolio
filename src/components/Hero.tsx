@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/useLanguage";
 import tr from "@/lib/translations";
@@ -46,23 +45,19 @@ export default function Hero() {
             <div className="relative z-10 w-full max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1700px] mx-auto px-6 md:px-10 lg:px-16 2xl:px-24 py-32 2xl:py-48">
                 <div className="grid lg:grid-cols-[1.1fr_0.9fr] 2xl:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 items-center">
                     <div>
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--border-accent)] bg-[var(--accent-dim)]/10 mb-8"
+                        <div
+                            style={{ animationDelay: "0.4s" }}
+                            className="anim-rise-left inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--border-accent)] bg-[var(--accent-dim)]/10 mb-8"
                         >
                             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                             <span className="text-xs font-mono text-[var(--fg-muted)] tracking-wide">
                                 {lang === "en" ? "Available for projects" : "Terbuka untuk proyek"}
                             </span>
-                        </motion.div>
+                        </div>
 
-                        <motion.h1
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7, delay: 0.5 }}
-                            className="font-display font-bold text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.05] tracking-[-0.03em] mb-6 2xl:mb-10"
+                        <h1
+                            style={{ animationDelay: "0.5s" }}
+                            className="anim-rise font-display font-bold text-[clamp(2.5rem,6vw,5.5rem)] leading-[1.05] tracking-[-0.03em] mb-6 2xl:mb-10"
                         >
                             <span className="text-[var(--fg)]">Senior</span>
                             <br />
@@ -71,42 +66,35 @@ export default function Hero() {
                             <span className="text-[var(--fg)] opacity-70">&</span>{" "}
                             <span className="relative inline-grid overflow-hidden h-[1.1em] align-bottom">
                                 {words.map((word, i) => (
-                                    <motion.span
+                                    <span
                                         key={word}
-                                        initial={false}
-                                        animate={{
-                                            y: (i - currentWord) * 100 + "%",
+                                        style={{
+                                            transform: `translateY(${(i - currentWord) * 100}%)`,
                                             opacity: i === currentWord ? 1 : 0,
-                                        }}
-                                        transition={{
-                                            duration: 0.5,
-                                            ease: [0.25, 0.1, 0.25, 1],
+                                            transition:
+                                                "transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.5s ease",
                                         }}
                                         className="[grid-area:1/1] text-gradient whitespace-nowrap"
                                     >
                                         {word}
-                                    </motion.span>
+                                    </span>
                                 ))}
                             </span>
-                        </motion.h1>
+                        </h1>
 
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.7 }}
-                            className="text-[var(--fg-muted)] text-base md:text-lg 2xl:text-xl leading-relaxed text-justify max-w-[480px] 2xl:max-w-[600px] mb-10 2xl:mb-14"
+                        <p
+                            style={{ animationDelay: "0.7s" }}
+                            className="anim-rise text-[var(--fg-muted)] text-base md:text-lg 2xl:text-xl leading-relaxed text-justify max-w-[480px] 2xl:max-w-[600px] mb-10 2xl:mb-14"
                         >
                             {lang === "en"
                                 ? "Crafting intelligent systems and scalable platforms. From multi-tenant architectures to production ML pipelines — I build things that think and things that scale."
                                 : "Membangun sistem cerdas dan platform skalabel. Dari arsitektur multi-tenant hingga pipeline ML produksi — saya membangun hal yang berpikir dan berkembang."
                             }
-                        </motion.p>
+                        </p>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.9 }}
-                            className="flex flex-wrap gap-4"
+                        <div
+                            style={{ animationDelay: "0.9s" }}
+                            className="anim-rise flex flex-wrap gap-4"
                         >
                             <a
                                 href="#projects"
@@ -133,14 +121,12 @@ export default function Hero() {
                             >
                                 {tr.hero.ctaContact[lang]}
                             </a>
-                        </motion.div>
+                        </div>
                     </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
-                        className="hidden lg:block relative"
+                    <div
+                        style={{ animationDelay: "0.6s" }}
+                        className="anim-zoom hidden lg:block relative"
                     >
                         <div className="relative w-full aspect-square max-w-[400px] ml-auto">
                             <div className="absolute inset-0 rounded-3xl border border-[var(--border)] bg-[var(--surface)]/50 backdrop-blur-sm overflow-hidden">
@@ -215,23 +201,17 @@ export default function Hero() {
                                 </span>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.4, duration: 0.6 }}
-                    className="absolute bottom-10 left-1/2 -translate-x-1/2"
+                <div
+                    style={{ animationDelay: "1.4s" }}
+                    className="anim-fade absolute bottom-10 left-1/2 -translate-x-1/2"
                 >
                     <div className="w-5 h-8 rounded-full border border-[var(--border)] flex justify-center pt-2">
-                        <motion.div
-                            animate={{ y: [0, 8, 0] }}
-                            transition={{ repeat: Infinity, duration: 1.5 }}
-                            className="w-1 h-1 rounded-full bg-[var(--accent-light)]"
-                        />
+                        <div className="anim-dot w-1 h-1 rounded-full bg-[var(--accent-light)]" />
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );
