@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Image from "next/image";
 import { useLanguage, t } from "@/lib/useLanguage";
 import tr from "@/lib/translations";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -134,28 +134,25 @@ export default function ProjectDetailPage() {
             <main className="max-w-[900px] mx-auto px-6 py-12 md:py-20">
                 {/* Hero Image */}
                 {project.image && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="w-full rounded-2xl overflow-hidden border border-[var(--border)] mb-10 bg-[var(--surface)]"
-                    >
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src={`/projects/${project.image}`}
-                            alt={title}
-                            className="w-full h-auto max-h-[480px] object-cover"
-                        />
-                    </motion.div>
+                    <div className="anim-rise w-full rounded-2xl overflow-hidden border border-[var(--border)] mb-10 bg-[var(--surface)]">
+                        <div className="relative w-full aspect-video max-h-[480px]">
+                            <Image
+                                src={`/projects/${project.image}`}
+                                alt={title}
+                                fill
+                                priority
+                                sizes="(max-width: 900px) 100vw, 900px"
+                                className="object-cover"
+                            />
+                        </div>
+                    </div>
                 )}
 
                 {/* Gallery */}
                 {project.gallery && project.gallery.length > 0 && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.05 }}
-                        className="mb-10"
+                    <div
+                        style={{ animationDelay: "0.05s" }}
+                        className="anim-rise mb-10"
                     >
                         <h2 className="font-display font-semibold text-lg mb-4 text-[var(--fg)]">
                             {tr.projectDetail.gallery[lang]}
@@ -166,12 +163,13 @@ export default function ProjectDetailPage() {
                                     key={item.src}
                                     className="rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--surface)] group"
                                 >
-                                    <div className="overflow-hidden">
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <img
+                                    <div className="relative overflow-hidden aspect-video">
+                                        <Image
                                             src={`/projects/${item.src}`}
                                             alt={t(item.caption, lang)}
-                                            className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                     </div>
                                     <figcaption className="px-4 py-3 text-xs font-mono text-[var(--fg-muted)] border-t border-[var(--border)]">
@@ -180,14 +178,13 @@ export default function ProjectDetailPage() {
                                 </figure>
                             ))}
                         </div>
-                    </motion.div>
+                    </div>
                 )}
 
                 {/* Title & Year */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
+                <div
+                    style={{ animationDelay: "0.1s" }}
+                    className="anim-rise"
                 >
                     <div className="flex items-center gap-3 mb-4">
                         <div
@@ -202,14 +199,11 @@ export default function ProjectDetailPage() {
                     <h1 className="font-display font-bold text-3xl md:text-5xl tracking-tight mb-6">
                         {title}
                     </h1>
-                </motion.div>
+                </div>
 
                 {/* Description */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6 md:p-8 mb-8"
+                <div style={{ animationDelay: "0.2s" }}
+                        className="anim-rise bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6 md:p-8 mb-8"
                 >
                     <h2 className="font-display font-semibold text-lg mb-4 text-[var(--fg)]">
                         {tr.projectDetail.overview[lang]}
@@ -217,14 +211,11 @@ export default function ProjectDetailPage() {
                     <p className="text-[var(--fg-muted)] leading-relaxed text-base">
                         {description}
                     </p>
-                </motion.div>
+                </div>
 
                 {/* Tags */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="mb-8"
+                <div style={{ animationDelay: "0.3s" }}
+                        className="anim-rise mb-8"
                 >
                     <h2 className="font-display font-semibold text-lg mb-4 text-[var(--fg)]">
                         {tr.projectDetail.keywords[lang]}
@@ -239,14 +230,11 @@ export default function ProjectDetailPage() {
                             </span>
                         ))}
                     </div>
-                </motion.div>
+                </div>
 
                 {/* Tech Stack Icons */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6 md:p-8 mb-8"
+                <div style={{ animationDelay: "0.4s" }}
+                        className="anim-rise bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6 md:p-8 mb-8"
                 >
                     <h2 className="font-display font-semibold text-lg mb-5 text-[var(--fg)]">
                         {tr.projectDetail.techStack[lang]}
@@ -284,14 +272,11 @@ export default function ProjectDetailPage() {
                             );
                         })}
                     </div>
-                </motion.div>
+                </div>
 
                 {/* Back Button */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.5 }}
-                    className="pt-8 border-t border-[var(--border)]"
+                <div style={{ animationDelay: "0.5s" }}
+                        className="anim-fade pt-8 border-t border-[var(--border)]"
                 >
                     <Link
                         href="/#projects"
@@ -302,7 +287,7 @@ export default function ProjectDetailPage() {
                         </svg>
                         {tr.projectDetail.backToAll[lang]}
                     </Link>
-                </motion.div>
+                </div>
             </main>
         </div>
     );
