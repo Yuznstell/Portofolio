@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import SectionWrapper from "./SectionWrapper";
+import { useInViewOnce } from "./Reveal";
 import { useLanguage } from "@/lib/useLanguage";
 import tr from "@/lib/translations";
 
@@ -70,8 +70,7 @@ function SkillBar({
     color: string;
     delay: number;
 }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+    const [ref, isInView] = useInViewOnce<HTMLDivElement>();
 
     return (
         <div ref={ref} className="group">
@@ -84,12 +83,13 @@ function SkillBar({
                 </span>
             </div>
             <div className="h-[3px] rounded-full bg-[var(--border)] overflow-hidden">
-                <motion.div
-                    initial={{ width: 0 }}
-                    animate={isInView ? { width: `${skill.level}%` } : {}}
-                    transition={{ duration: 0.8, delay, ease: [0.25, 0.1, 0.25, 1] }}
+                <div
                     className="h-full rounded-full"
-                    style={{ background: color }}
+                    style={{
+                        background: color,
+                        width: isInView ? `${skill.level}%` : "0%",
+                        transition: `width 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) ${delay}s`,
+                    }}
                 />
             </div>
         </div>
@@ -148,12 +148,9 @@ export default function TechStack() {
                         ))}
                     </div>
 
-                    <motion.div
+                    <div
                         key={activeCategory}
-                        initial={{ opacity: 0, x: 10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6 md:p-8"
+                        className="anim-rise bg-[var(--surface)] border border-[var(--border)] rounded-2xl p-6 md:p-8"
                     >
                         <div className="flex items-center gap-3 mb-8">
                             <span
@@ -174,7 +171,7 @@ export default function TechStack() {
                                 />
                             ))}
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </SectionWrapper>
