@@ -69,7 +69,7 @@ export default function Hero() {
                             <span className="text-gradient">Full-stack</span>
                             <br />
                             <span className="text-[var(--fg)] opacity-70">&</span>{" "}
-                            <span className="relative inline-block overflow-hidden h-[1.1em] align-bottom min-w-[510px]">
+                            <span className="relative inline-grid overflow-hidden h-[1.1em] align-bottom">
                                 {words.map((word, i) => (
                                     <motion.span
                                         key={word}
@@ -82,7 +82,7 @@ export default function Hero() {
                                             duration: 0.5,
                                             ease: [0.25, 0.1, 0.25, 1],
                                         }}
-                                        className="absolute left-0 top-0 text-gradient whitespace-nowrap"
+                                        className="[grid-area:1/1] text-gradient whitespace-nowrap"
                                     >
                                         {word}
                                     </motion.span>

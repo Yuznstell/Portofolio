@@ -12,13 +12,58 @@
   },
   "about": {
     "bio": {
-      "en": "As a result-oriented Full-stack Developer and AI Engineer, I focus on developing digital solutions that enhance business efficiency and innovation. My expertise spans Progressive Web Apps (PWA) for institutional platforms, integrated IoT monitoring system architecture, and HUD interface design for electric vehicles. I have a strong track record implementing high-impact AI/ML solutions such as personalized recommendation engines, security camera (CCTV) image enhancement using GAN architectures, and real-time facial recognition biometric verification systems. Additionally, I have experience building community-based applications and integrating blockchain ecosystems for transparent construction management systems. I am committed to bridging complex technology with real business value.",
-      "id": "Sebagai Full-stack Developer dan AI Engineer yang berorientasi pada hasil, saya berfokus pada pengembangan solusi digital yang meningkatkan efisiensi dan inovasi bisnis. Keahlian saya mencakup pengembangan Progressive Web Apps (PWA) untuk platform institusional, arsitektur sistem monitoring IoT terintegrasi, hingga perancangan antarmuka (HUD) untuk kendaraan listrik. Saya memiliki rekam jejak yang kuat dalam mengimplementasikan solusi AI/ML berdampak tinggi, seperti mesin rekomendasi terpersonalisasi, peningkatan kualitas citra keamanan (CCTV) menggunakan arsitektur GAN, dan sistem verifikasi biometrik pengenalan wajah real-time. Selain itu, saya berpengalaman merancang aplikasi berbasis komunitas dan mengintegrasikan ekosistem blockchain untuk sistem manajemen konstruksi yang transparan. Saya berkomitmen untuk menjembatani teknologi kompleks dengan nilai bisnis yang nyata."
+      "en": "As a result-oriented Full-stack Developer and AI Engineer, I focus on developing digital solutions that enhance business efficiency and innovation. My expertise spans Progressive Web Apps (PWA) for institutional platforms, integrated IoT monitoring system architecture, and HUD interface design for electric vehicles. I have a strong track record implementing high-impact AI/ML solutions such as personalized recommendation engines, security camera (CCTV) image enhancement using GAN architectures, and real-time facial recognition biometric verification systems. Additionally, I have experience building community-based applications and integrating blockchain ecosystems for transparent construction management systems. I am committed to bridging complex technology with real business value. Currently a Staff Programmer at PT Araz Inti Line (ZITLINE), where I build ZIVA — a multi-tenant IPTV platform for hospitals and hotels.",
+      "id": "Sebagai Full-stack Developer dan AI Engineer yang berorientasi pada hasil, saya berfokus pada pengembangan solusi digital yang meningkatkan efisiensi dan inovasi bisnis. Keahlian saya mencakup pengembangan Progressive Web Apps (PWA) untuk platform institusional, arsitektur sistem monitoring IoT terintegrasi, hingga perancangan antarmuka (HUD) untuk kendaraan listrik. Saya memiliki rekam jejak yang kuat dalam mengimplementasikan solusi AI/ML berdampak tinggi, seperti mesin rekomendasi terpersonalisasi, peningkatan kualitas citra keamanan (CCTV) menggunakan arsitektur GAN, dan sistem verifikasi biometrik pengenalan wajah real-time. Selain itu, saya berpengalaman merancang aplikasi berbasis komunitas dan mengintegrasikan ekosistem blockchain untuk sistem manajemen konstruksi yang transparan. Saya berkomitmen untuk menjembatani teknologi kompleks dengan nilai bisnis yang nyata. Saat ini bekerja sebagai Staff Programmer di PT Araz Inti Line (ZITLINE), membangun ZIVA — platform IPTV multi-tenant untuk rumah sakit dan hotel."
     },
-    "photoUrl": "https://media.licdn.com/dms/image/v2/D5603AQGhr2krcwUkNw/profile-displayphoto-scale_400_400/B56ZktJanFG4Ak-/0/1757399067883?e=1773878400&v=beta&t=1MlyuHcgMhcIO4LrX9F72Ni823Eh3nqRjr463KJ0NZc",
+    "photoUrl": "/profile.jpg",
     "location": "Indonesia"
   },
   "projects": [
+    {
+      "id": "ziva-iptv-platform",
+      "title": {
+        "en": "ZIVA — Multi-Tenant IPTV Platform",
+        "id": "ZIVA — Platform IPTV Multi-Tenant"
+      },
+      "description": {
+        "en": "ZIVA (Zitline Interactive Visual Application) is a multi-tenant IPTV platform for hospitals and hotels. It unifies device management, in-room food ordering, a real-time nurse call system, and integrations with hospital medical record systems and hotel property management — all in one dashboard.",
+        "id": "ZIVA (Zitline Interactive Visual Application) adalah platform IPTV multi-tenant untuk rumah sakit dan hotel. Mengintegrasikan manajemen perangkat, pemesanan makanan dari kamar, sistem panggilan perawat real-time, serta integrasi dengan sistem rekam medis rumah sakit dan manajemen properti hotel — semua dalam satu dasbor terpadu."
+      },
+      "tags": [
+        "Next.js",
+        "IPTV",
+        "Real-time",
+        "Multi-tenant",
+        "Dashboard"
+      ],
+      "link": "http://103.87.229.5:8081/",
+      "image": "ziva-iptv.png",
+      "gallery": [
+        {
+          "src": "ziva-stb-home.png",
+          "caption": {
+            "en": "STB App — In-room TV home screen",
+            "id": "Aplikasi STB — Layar utama TV kamar"
+          }
+        },
+        {
+          "src": "ziva-stb-assistance.png",
+          "caption": {
+            "en": "STB App — Assistance & Care services",
+            "id": "Aplikasi STB — Layanan Assistance & Care"
+          }
+        },
+        {
+          "src": "ziva-dashboard-nursecall.png",
+          "caption": {
+            "en": "Dashboard — Real-time nurse call monitor",
+            "id": "Dashboard — Monitor panggilan perawat real-time"
+          }
+        }
+      ],
+      "accent": "#84cc16",
+      "year": 2026
+    },
     {
       "id": "pwa-psppi-unila",
       "title": "PWA Website PSPPI Unila",
@@ -193,6 +238,26 @@
     }
   ],
   "experiences": [
+    {
+      "id": "exp-araz-inti-line",
+      "period": "Nov 2025 — Present",
+      "role": {
+        "en": "Staff Programmer",
+        "id": "Staff Programmer"
+      },
+      "company": "PT Araz Inti Line (ZITLINE) — Bandar Lampung",
+      "description": {
+        "en": "Building ZIVA, a multi-tenant IPTV platform for hospitals and hotels: device management, in-room dining orders, real-time nurse calls, and EMR plus hotel PMS integrations in one unified dashboard. Led end-to-end QA for the Zita app across three device platforms, and maintain four OJS-based academic journal platforms.",
+        "id": "Membangun ZIVA, platform IPTV multi-tenant untuk rumah sakit dan hotel: manajemen perangkat, pemesanan makanan dari kamar, panggilan perawat real-time, serta integrasi rekam medis dan sistem manajemen properti hotel dalam satu dasbor terpadu. Memimpin QA menyeluruh untuk aplikasi Zita di tiga platform perangkat, serta memelihara empat platform jurnal akademik berbasis OJS."
+      },
+      "tags": [
+        "Next.js",
+        "IPTV",
+        "Real-time",
+        "QA",
+        "OJS"
+      ]
+    },
     {
       "id": "exp-1",
       "period": "2023 — Present",

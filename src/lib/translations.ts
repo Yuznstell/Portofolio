@@ -50,6 +50,7 @@ const translations = {
         backToAll: { en: "Back to All Projects", id: "Kembali ke Semua Proyek" },
         projectDetails: { en: "Project Details", id: "Detail Proyek" },
         notFound: { en: "Project Not Found", id: "Proyek Tidak Ditemukan" },
+        gallery: { en: "Gallery", id: "Galeri" },
     },
 
     // Tech Stack

@@ -8,6 +8,11 @@ import { useLanguage, t } from "@/lib/useLanguage";
 import tr from "@/lib/translations";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
+interface GalleryItem {
+    src: string;
+    caption: string | { en: string; id: string };
+}
+
 interface Project {
     id: string;
     title: string | { en: string; id: string };
@@ -16,6 +21,7 @@ interface Project {
     link: string;
     accent: string;
     image?: string;
+    gallery?: GalleryItem[];
     year?: number;
 }
 
@@ -140,6 +146,40 @@ export default function ProjectDetailPage() {
                             alt={title}
                             className="w-full h-auto max-h-[480px] object-cover"
                         />
+                    </motion.div>
+                )}
+
+                {/* Gallery */}
+                {project.gallery && project.gallery.length > 0 && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.05 }}
+                        className="mb-10"
+                    >
+                        <h2 className="font-display font-semibold text-lg mb-4 text-[var(--fg)]">
+                            {tr.projectDetail.gallery[lang]}
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {project.gallery.map((item) => (
+                                <figure
+                                    key={item.src}
+                                    className="rounded-2xl overflow-hidden border border-[var(--border)] bg-[var(--surface)] group"
+                                >
+                                    <div className="overflow-hidden">
+                                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                                        <img
+                                            src={`/projects/${item.src}`}
+                                            alt={t(item.caption, lang)}
+                                            className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                    </div>
+                                    <figcaption className="px-4 py-3 text-xs font-mono text-[var(--fg-muted)] border-t border-[var(--border)]">
+                                        {t(item.caption, lang)}
+                                    </figcaption>
+                                </figure>
+                            ))}
+                        </div>
                     </motion.div>
                 )}
 

@@ -22,6 +22,7 @@ const categories: SkillCategory[] = [
         label: "Frontend",
         color: "#7c3aed",
         skills: [
+            { name: "Next.js / React", level: 88 },
             { name: "HTML / CSS / JavaScript", level: 90 },
             { name: "PWA (Progressive Web Apps)", level: 85 },
             { name: "WordPress", level: 80 },
