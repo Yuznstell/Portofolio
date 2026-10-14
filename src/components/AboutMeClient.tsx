@@ -57,13 +57,22 @@ export default function AboutMeClient({
                     >
                         <div className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] md:w-[240px] md:h-[240px] 2xl:w-[320px] 2xl:h-[320px] rounded-2xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden relative">
                             {photoUrl ? (
-                                <Image
-                                    src={photoUrl}
-                                    alt={name}
-                                    fill
-                                    sizes="(max-width: 640px) 200px, (max-width: 768px) 240px, 320px"
-                                    className="object-cover"
-                                />
+                                photoUrl.startsWith("data:") ? (
+                                    // eslint-disable-next-line @next/next/no-img-element
+                                    <img
+                                        src={photoUrl}
+                                        alt={name}
+                                        className="w-full h-full object-cover"
+                                    />
+                                ) : (
+                                    <Image
+                                        src={photoUrl}
+                                        alt={name}
+                                        fill
+                                        sizes="(max-width: 640px) 200px, (max-width: 768px) 240px, 320px"
+                                        className="object-cover"
+                                    />
+                                )
                             ) : (
                                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--accent-dim)] to-[var(--surface)]">
                                     <span className="font-display font-bold text-5xl md:text-6xl text-[var(--accent-light)]/60">
