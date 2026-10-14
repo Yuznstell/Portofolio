@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import Image from "next/image";
 import SectionWrapper from "./SectionWrapper";
+import Reveal from "./Reveal";
 import { useLanguage, t } from "@/lib/useLanguage";
 import tr from "@/lib/translations";
 
@@ -21,8 +21,6 @@ export default function AboutMeClient({
     photoUrl,
     location,
 }: AboutMeClientProps) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-60px" });
     const { lang } = useLanguage();
 
     const initials = name
@@ -50,22 +48,21 @@ export default function AboutMeClient({
                     </div>
                 </div>
 
-                <div
-                    ref={ref}
-                    className="grid lg:grid-cols-[auto_1fr] gap-10 lg:gap-16 items-start"
-                >
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                <div className="grid lg:grid-cols-[auto_1fr] gap-10 lg:gap-16 items-start">
+                    <Reveal
+                        y={0}
+                        scale={0.9}
+                        duration={0.6}
                         className="relative mx-auto lg:mx-0"
                     >
                         <div className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] md:w-[240px] md:h-[240px] 2xl:w-[320px] 2xl:h-[320px] rounded-2xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden relative">
                             {photoUrl ? (
-                                <img
+                                <Image
                                     src={photoUrl}
                                     alt={name}
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    sizes="(max-width: 640px) 200px, (max-width: 768px) 240px, 320px"
+                                    className="object-cover"
                                 />
                             ) : (
                                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[var(--accent-dim)] to-[var(--surface)]">
@@ -81,17 +78,9 @@ export default function AboutMeClient({
                                 📍 {location}
                             </span>
                         </div>
-                    </motion.div>
+                    </Reveal>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{
-                            duration: 0.6,
-                            delay: 0.15,
-                            ease: [0.25, 0.1, 0.25, 1],
-                        }}
-                    >
+                    <Reveal y={20} delay={0.15} duration={0.6}>
                         <h3 className="font-display font-bold text-2xl md:text-3xl tracking-tight mb-1">
                             {name}
                         </h3>
@@ -130,7 +119,7 @@ export default function AboutMeClient({
                                 </span>
                             </div>
                         </div>
-                    </motion.div>
+                    </Reveal>
                 </div>
             </div>
         </SectionWrapper>
